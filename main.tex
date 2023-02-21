@@ -1,0 +1,77 @@
+\documentclass[final]{beamer}
+\usetheme{Berlin}
+\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
+
+\title[FastGates]{Fast gates with trapped ions}
+
+\begin{document}
+\begin{frame}{} 
+
+\begin{center}
+\begin{columns}[T,onlytextwidth]
+  \begin{column}{0.48\textwidth}
+
+    \begin{block}{Why Fast Gates?}
+      \begin{itemize}
+      \item Define a gate - MS hamiltionian
+      \item fig: alkali metal zero spin structure diagram
+      \item quadropole transition vs Raman
+
+      \item Long coherence time of ions 
+      \item Clock speeds of ion trap qc
+      \item issues with scaling (commutivity of quadropole MS hamiltionian bessel) and proposed solution
+      \item issue with exciting spectators. Use fancy pulse shaping (Vera paper).
+      \item fig: pulse shaping
+      \item fig: interaction strength with motion saturates.
+      \end{itemize}
+    \end{block}
+
+
+    \begin{block}{Fast Gates with a Lattice}
+      \begin{itemize}
+      \item MS Hamiltionian with lattice removes this saturation.
+      \item choosing phase diff of 0 and sitting at antinode to get maximal sb coupling
+      \item fig: Control of phase visible to ions
+      \item fig: MS gate fidelitly with gate time
+      \end{itemize}
+    \end{block}
+
+  \end{column}
+
+
+  \begin{column}{0.48\textwidth}
+
+    \begin{block}{Phase Stabilization}
+      \begin{itemize}
+      \item fig: experimental set up (fig1 cnulled)
+      \item using ion feedback
+      \item fig: RBM data to show no worse
+      \end{itemize}
+    \end{block}
+
+
+    \begin{block}{New Platform}
+      \begin{itemize}
+      \item whats new: double NA, Ca40, NPL trap (3D heating rates), MuMetal shield, perm magnets.
+      \item quadropole used.
+
+        ``In practice, the dominant error source in [quadropole] gates is laser
+        frequency noise resonant with the carrier transition,
+        uncontrolled light shifts arising from the carrier, and laser
+        phase noise at time scales comparable with the gate; all of
+        these are exacerbated by the relatively small Lamb-Dicke
+        parameter (typically ~0.05), which also sets a practical limit
+        to the gate speed because it limits gates to the adiabatic
+        regime [Roos 2008].''
+
+      \item fig: solidworks of new experiment
+      \item fig: array of single addressing SW
+      \end{itemize}
+    \end{block}
+
+  \end{column}
+\end{columns}
+\end{center}
+
+\end{frame}
+\end{document}
