@@ -31,9 +31,9 @@
 \newcommand{\separatorcolumn}{\begin{column}{\sepwidth}\end{column}}
 
 \footercontent{
-  \href{https://www.example.com}{https://www.example.com} \hfill
-  ABC Conference 2025, New York --- XYZ-1234 \hfill
-  \href{mailto:alyssa.p.hacker@example.com}{alyssa.p.hacker@example.com}}
+  XXXReferences and fundersXXX \hfill
+  SAMOP 2023, \hfill
+  \href{mailto:donovan.webb@physics.ox.ac.uk}{donovan.webb@physics.ox.ac.uk}}
 
 % ====================
 % Logo (optional)
@@ -122,7 +122,7 @@ Department of Physics, University of Oxford}
             may be expressed as [Xref Canzz?X]:
       \Large$$ \hat{H}_{MS-TW} = \hbar\eta\Omega(J_0(2\Omega/\delta) + J_2(2\Omega/\delta))\cdot \cos{(\delta t)}\hat{S}_{\phi}(\hat{a}e^{-i\omega_zt} + \hat{a}^\dagger e^{i\omega_zt})$$\normalsize
       \end{itemize}
-      \begin{minipage}{0.6\textwidth}
+      \begin{minipage}{0.58\textwidth}
       \begin{itemize}
       \item \textbf{Carrier term:} Error results in the effective rabi
         frequency being modulated by $(J_0 + J_2)$. This may be
@@ -134,12 +134,11 @@ Department of Physics, University of Oxford}
         loops are closed on completion of the gate.\\
       \end{itemize}
       \end{minipage}
-      \begin{minipage}{0.36\textwidth}
+      \begin{minipage}{0.38\textwidth}
       \begin{figure}
-        \includegraphics[width=0.95\textwidth]{./figs/J0J2.pdf}
+        \includegraphics[width=0.98\textwidth]{./figs/J0J2.pdf}
       \end{figure}
       \end{minipage}
-        \includegraphics[width=0.45\textwidth]{./figs/ca_struct_tmp.jpeg}
 
       \begin{figure}
         \includegraphics[width=0.9\textwidth]{./figs/loop_closing.png}
@@ -148,8 +147,8 @@ Department of Physics, University of Oxford}
 %}}}
 
 %Lattice {{{
-    \begin{alertblock}{Fast Gates with a Lattice}
-      Bichromatic Lattice Hamiltonian where ions are seperated by $n\lambda$:
+    \begin{alertblock}{Fast Gates with a Standing Wave}
+      Bichromatic standing wave Hamiltonian where ions are seperated by $n\lambda$:
 
       \large$$ \hat{H}_{MS-SW} = \hbar 2\Omega \hat{S}_{\phi}\cos{(\delta t)}\sin{(\Delta\phi/2)} + \hbar 2\Omega\eta \hat{S}_\phi\cos{(\delta t)}(\hat{a}e^{-i\omega_zt} + \hat{a}^\dagger e^{i\omega_zt})\cos{(\Delta\phi/2)}$$\normalsize
       \begin{itemize}
@@ -157,13 +156,15 @@ Department of Physics, University of Oxford}
         entirely null the carrier term and maximise sideband
         coupling.\\
       \item Enables fast gates by preventing the saturation effect seen in the travelling MS.\\
-      \item Using lattice gives complete control over phase visible to ions. \\
+      \item Using optical lattice gives complete control over phase visible to ions. \\
       \end{itemize}
 
       \begin{figure}
         \includegraphics[width=0.48\textwidth]{./figs/Figure_2_v2.pdf}
         \includegraphics[width=0.48\textwidth]{./figs/two_qubit_gate_figure.pdf}
       \end{figure}
+
+      Results from Cnulling:
 
     \end{alertblock}
 %}}}
@@ -172,6 +173,10 @@ Department of Physics, University of Oxford}
   \begin{column}{0.49\textwidth}
 
 %Experimental {{{
+    \begin{alertblock}{$\mathbf{S_Z}$ type interactions}
+      Talk about CANZZ
+    \end{alertblock}
+
     \begin{alertblock}{Phase Stabilization}
 
       \begin{figure}
@@ -197,28 +202,31 @@ Department of Physics, University of Oxford}
       \item No detriment using lattice: Standard Randomized
             Benchmarking gave quality of our single qubit rotations per
             gate to be $\epsilon = 0.173(3)\%$ for a travelling wave and
-            $\epsilon = 0.144(3)\%$ for the lattice.\\
+            $\epsilon = 0.144(3)\%$ for the standing wave.\\
       \end{itemize}
     \end{alertblock}
 
 
     \begin{alertblock}{New Platform}
+      \begin{minipage}{0.58\textwidth}
       \begin{itemize}
-      \item whats new: double NA, Ca40, NPL trap (3D heating rates), MuMetal shield, perm magnets.
-      \item quadropole used.
-
-        ``In practice, the dominant error source in [quadropole] gates is laser
-        frequency noise resonant with the carrier transition,
-        uncontrolled light shifts arising from the carrier, and laser
-        phase noise at time scales comparable with the gate; all of
-        these are exacerbated by the relatively small Lamb-Dicke
-        parameter (typically ~0.05), which also sets a practical limit
-        to the gate speed because it limits gates to the adiabatic
-        regime [Roos 2008].''
-
+      \item New ion trap experiment in development for exploring fast
+        gate regime.
+      \item Two high NA lenses allow optical
+        access on both faces of the trap to create an array of singly
+        addressing standing waves.
+      \item 3D segmented trap design from NPL facilitates low heating
+        rates whilst enabling ion shuttling and crystal rotations.
+      \item Calcium 40
+      \item quadropole transition used.
+      \item MuMetal shield and permanent magnets.
       \item fig: solidworks of new experiment
-      \item fig: array of single addressing SW
       \end{itemize}
+      \end{minipage}
+      ~~
+      \begin{minipage}{0.35\textwidth}
+      \includegraphics[width=0.94\textwidth]{./figs/ca_struct_tmp.jpeg}
+      \end{minipage}
 
       \begin{figure}
         \includegraphics[height=0.35\textwidth]{./figs/trap_NA.png}
