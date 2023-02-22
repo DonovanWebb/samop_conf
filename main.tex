@@ -1,110 +1,208 @@
+%Settings {{{
 \documentclass[final]{beamer}
-\mode<presentation>
-{\usetheme{Berlin}}
-
-\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
+\usepackage[orientation=portrait,size=a1,scale=1,debug]{beamerposter}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usetheme{gemini}
+\usecolortheme{ox}
 \usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{anyfontsize}
 
-\title[FastGates]{\huge Next generation platform for implementing fast gates in ion trap quantum computation}
-\author[]{\large D. Webb \and O. Bazavan \and S. Saner \and C. Ballance}
-\institute[]{\Large
-Ion Trap Quantum Computing Group
+%\setsansfont{FoundSteBoo}
+%default font setup for use with pdflatex
+%\renewcommand{\rmdefault}{phv} %%% Helvetica (very similar to Arial)
+
+
+% ====================
+% Lengths
+% ====================
+
+% If you have N columns, choose \sepwidth and \colwidth such that
+% (N+1)*\sepwidth + N*\colwidth = \paperwidth
+\newlength{\sepwidth}
+\newlength{\colwidth}
+\setlength{\sepwidth}{0.025\paperwidth}
+\setlength{\colwidth}{0.3\paperwidth}
+
+\newcommand{\separatorcolumn}{\begin{column}{\sepwidth}\end{column}}
+
+\footercontent{
+  \href{https://www.example.com}{https://www.example.com} \hfill
+  ABC Conference 2025, New York --- XYZ-1234 \hfill
+  \href{mailto:alyssa.p.hacker@example.com}{alyssa.p.hacker@example.com}}
+
+% ====================
+% Logo (optional)
+% ====================
+
+% use this to include logos on the left and/or right side of the header:
+% \logoright{\includegraphics[height=7cm]{logo1.pdf}}
+\logoleft{\fbox{
+    \includegraphics[height=7cm]{figs/oxlogo.pdf}}
+}
+
+\newcommand{\SubItem}[1]{
+    {\setlength\itemindent{15pt} \item[] #1}
+}
+
+%}}}
+
+%title {{{
+
+\title[FastGates]{\Huge Next generation platform for implementing fast gates in ion trap quantum computation}
+\author{\textbf{D. Webb \and O. Bazavan \and S. Saner \and C. Ballance}}
+\institute[]{
+Ion Trap Quantum Computing Group,
 Department of Physics, University of Oxford}
 
 \begin{document}
 \begin{frame}{} 
-
-\maketitle
-
-%%% figs array_sw.png  Figure_2_v2.pdf  setup+beams_horizontal.pdf
-
+%}}}
 
 \begin{center}
 
+%Abstract {{{
+
+    \vspace{-1em}
     \begin{block}{}
-      XX Shorten Abstract XX\\
+    \large
     Scalable trapped-ion quantum computation relies on the development of
     high-fidelity fast entangling gates in a many ion
     crystal. Conventional geometric phase gates either suffer from
     scattering errors or off-resonant carrier excitations. A potential
     route to achieve fast entanglement is creating a standing wave which
-    can suppress the unwanted carrier coupling [Mundt 2003]. \\
+    can suppress the unwanted carrier coupling. \\
 
-    We present the roadmap to our next-generation platform tailored for
-    fast gates in the ~1us regime where gate speeds become comparable to
-    the secular trap frequency. The quadrupole transitions between S1/2
-    and D5/2 levels in Calcium 40 will be driven to perform
-    Molmer-Sorenson gates with a standing wave rather than a typical
-    travelling wave. The off-resonant carrier excitation may be strongly
-    suppressed by placing ions at the nodes of the optical lattice. This
-    new platform has scope for a multi-ion chain and a corresponding array
-    of optical lattices which each address a single ion. The lattice array
-    is created by a set of counter-propagating beams which are tightly
-    focused by a symmetric setup of high-NA lenses. Control of the optical
-    phase at the ion site will be achieved by actively stabilising the
-    counter-propagating beam interferometer and feedbacking on the ion
-    signal.
+    %% We present the roadmap to our next-generation platform tailored for
+    %% fast gates in the ~1us regime where gate speeds become comparable to
+    %% the secular trap frequency. The quadrupole transitions between S1/2
+    %% and D5/2 levels in Calcium 40 will be driven to perform
+    %% Molmer-Sorenson gates with a standing wave rather than a typical
+    %% travelling wave. The off-resonant carrier excitation may be strongly
+    %% suppressed by placing ions at the nodes of the optical lattice. This
+    %% new platform has scope for a multi-ion chain and a corresponding array
+    %% of optical lattices which each address a single ion. The lattice array
+    %% is created by a set of counter-propagating beams which are tightly
+    %% focused by a symmetric setup of high-NA lenses. Control of the optical
+    %% phase at the ion site will be achieved by actively stabilising the
+    %% counter-propagating beam interferometer and feedbacking on the ion
+    %% signal.
     \end{block}
-
+%}}}
 
 \begin{columns}[t]
   \begin{column}{0.49\textwidth}
 
-    \begin{block}{Why Fast Gates?}
-      Two qubit gates realised in ion trap QC by coupling spin with motion. Molmer Sorenson interaction achieves this via a bichromatic field incident on the ions:
-      $$ \hat{H_{MS}} = \hbar\Omega \hat{S}_{\phi-\pi/2}\cos{(\delta t)} + \hbar\Omega\eta \hat{S}_\phi\cos{(\delta t)}(\hat{a}e^{-i\omega_zt} + \hat{a}^\dagger e^{i\omega_zt})$$
-      First term (carrier) a complication whilst second is desired coupling.
-      For a quadropole transition, moving into the ??interaction picutre?? this Hamiltonian can be expressed as (modulated by $J_0+J_2$.
-      $$ \hat{H_{MS}} = \hbar\eta\Omega(J_0(2\Omega/\delta) + J_2(2\Omega/\delta))\cdot \cos{(\delta t)}\hat{S}_{\phi}(\hat{a}e^{-i\omega_zt} + \hat{a}^\dagger e^{i\omega_zt})$$
+%Why {{{
+    \begin{alertblock}{Why Fast Gates?}
       \begin{itemize}
-      \item Define a gate - MS hamiltonian
-      \item fig: alkali metal zero spin structure diagram
-      \item quadropole transition vs Raman
+      \item Two qubit gates are implemented by coupling spin with motion of ions in the trap
+      potential.
 
-      \item Long coherence time of ions 
-      \item Clock speeds of ion trap qc
-      \item issues with scaling (commutivity of quadropole MS hamiltionian bessel) and proposed solution
-      \item issue with exciting spectators. Use fancy pulse shaping (Vera paper).
-      \item fig: pulse shaping
-      \item fig: interaction strength with motion saturates.
+      \item Mølmer Sørenson (MS) interactions achieve this via a
+      bichromatic field incident on the ions. Using travelling
+      waves gives the Hamiltonian
+      \Large$$ \hat{H}_{MS-TW} = \hbar\Omega \hat{S}_{\phi-\pi/2}\cos{(\delta t)} + \hbar\Omega\eta \hat{S}_\phi\cos{(\delta t)}(\hat{a}e^{-i\omega_zt} + \hat{a}^\dagger e^{i\omega_zt})$$\normalsize
+      \vspace{0.4em}
+      with the first term being the carrier whilst the second is the desired coupling.\vspace{0.8em}
+
+      \item Fast entangling gates in ion traps enable the
+            performance of complex quantum computations in reasonable times.\vspace{0.8em}
+
+      \item However going fast requires moving out of the adiabatic
+            regime. With travelling wave MS gates this results in errors
+            due to both the presence of the carrier term and exciting
+            ``spectator'' modes.\vspace{0.4em}
+
+      \item Moving into the ??interaction picture?? this Hamiltonian
+            may be expressed as [Xref Canzz?X]:
+      \Large$$ \hat{H}_{MS-TW} = \hbar\eta\Omega(J_0(2\Omega/\delta) + J_2(2\Omega/\delta))\cdot \cos{(\delta t)}\hat{S}_{\phi}(\hat{a}e^{-i\omega_zt} + \hat{a}^\dagger e^{i\omega_zt})$$\normalsize
       \end{itemize}
-    \end{block}
-
-
-    \begin{block}{Fast Gates with a Lattice}
+      \begin{minipage}{0.6\textwidth}
       \begin{itemize}
-      \item MS Hamiltionian with lattice removes this saturation.
-      \item choosing phase diff of 0 and sitting at antinode to get maximal sb coupling
-      \item fig: Control of phase visible to ions
-      \item fig: MS gate fidelitly with gate time
+      \item \textbf{Carrier term:} Error results in the effective rabi
+        frequency being modulated by $(J_0 + J_2)$. This may be
+        mitigated by supressing the carrier.\vspace{0.8em}
+
+      \item \textbf{Spectator excitation:} Amplitude shaped pulses
+        [ref vera] have been shown to effectively remove this
+        ``spectator'' error by ensuring all the modes respective phase
+        loops are closed on completion of the gate.\\
+      \end{itemize}
+      \end{minipage}
+      \begin{minipage}{0.36\textwidth}
+      \begin{figure}
+        \includegraphics[width=0.95\textwidth]{./figs/J0J2.pdf}
+      \end{figure}
+      \end{minipage}
+        \includegraphics[width=0.45\textwidth]{./figs/ca_struct_tmp.jpeg}
+
+      \begin{figure}
+        \includegraphics[width=0.9\textwidth]{./figs/loop_closing.png}
+      \end{figure}
+    \end{alertblock}
+%}}}
+
+%Lattice {{{
+    \begin{alertblock}{Fast Gates with a Lattice}
+      Bichromatic Lattice Hamiltonian where ions are seperated by $n\lambda$:
+
+      \large$$ \hat{H}_{MS-SW} = \hbar 2\Omega \hat{S}_{\phi}\cos{(\delta t)}\sin{(\Delta\phi/2)} + \hbar 2\Omega\eta \hat{S}_\phi\cos{(\delta t)}(\hat{a}e^{-i\omega_zt} + \hat{a}^\dagger e^{i\omega_zt})\cos{(\Delta\phi/2)}$$\normalsize
+      \begin{itemize}
+      \item Setting $\Delta\phi = 0$ (ions sitting at antinodes) we
+        entirely null the carrier term and maximise sideband
+        coupling.\\
+      \item Enables fast gates by preventing the saturation effect seen in the travelling MS.\\
+      \item Using lattice gives complete control over phase visible to ions. \\
       \end{itemize}
 
       \begin{figure}
-        \includegraphics[width=0.5\textwidth]{./figs/Figure_2_v2.pdf}
+        \includegraphics[width=0.48\textwidth]{./figs/Figure_2_v2.pdf}
+        \includegraphics[width=0.48\textwidth]{./figs/two_qubit_gate_figure.pdf}
       \end{figure}
 
-    \end{block}
+    \end{alertblock}
+%}}}
 
   \end{column}
-
-
   \begin{column}{0.49\textwidth}
 
-    \begin{block}{Phase Stabilization}
+%Experimental {{{
+    \begin{alertblock}{Phase Stabilization}
 
       \begin{figure}
         \includegraphics[width=0.5\textwidth]{./figs/setup+beams_horizontal.pdf}
       \end{figure}
 
       \begin{itemize}
-      \item fig: experimental set up (fig1 cnulled)
-      \item using ion feedback
-      \item fig: RBM data to show no worse
+      \item Optical lattice requires phase stabilisation to perform
+            coherent interactions.\\
+      \item Phase stabilised passively using enclosure and actively by two-step process:\\
+      \SubItem 1) Fast drifts removed utilising interference of light
+            from the two branches on a photodiode (PD).\\
+
+      \SubItem 2) As PD lockpoint is ~30 cm away
+            from ions, a second feedback loop using the ion as a
+            sensor is required. We do this by performing a $\pi/2$-pulse
+            using arm 1 ($\pi/2$, b1) followed immediately by a $\pi/2$-pulse
+            using arm 2 ($pi/2$, b2). This is equivalent to a zero-delay
+            Ramsey sequence, which gives a signal sensitive on the
+            difference in phase between the two pulses, hence the
+            relative phase be- tween the branches.\\
+
+      \item No detriment using lattice: Standard Randomized
+            Benchmarking gave quality of our single qubit rotations per
+            gate to be $\epsilon = 0.173(3)\%$ for a travelling wave and
+            $\epsilon = 0.144(3)\%$ for the lattice.\\
       \end{itemize}
-    \end{block}
+    \end{alertblock}
 
 
-    \begin{block}{New Platform}
+    \begin{alertblock}{New Platform}
       \begin{itemize}
       \item whats new: double NA, Ca40, NPL trap (3D heating rates), MuMetal shield, perm magnets.
       \item quadropole used.
@@ -123,10 +221,13 @@ Department of Physics, University of Oxford}
       \end{itemize}
 
       \begin{figure}
-        \includegraphics[width=0.75\textwidth]{./figs/array_sw.png}
+        \includegraphics[height=0.35\textwidth]{./figs/trap_NA.png}
+        \includegraphics[height=0.35\textwidth]{./figs/exp_iso.png}
+        \includegraphics[height=0.35\textwidth]{./figs/array_sw.png}
       \end{figure}
 
-    \end{block}
+    \end{alertblock}
+%}}}
 
   \end{column}
 \end{columns}
