@@ -101,10 +101,10 @@ Department of Physics, University of Oxford}
     \begin{alertblock}{Non-Adiabatic Mølmer Sørenson Gates}
       \begin{itemize}
       \item Two qubit gates are implemented by coupling spin with shared motion of the ions.
-        XXX Figure of geometric phase gate. XXX
+        %XXX Figure of geometric phase gate. XXX
       \item Fast entangling gates enable deeper quantum computational circuit depths for given level of incoherent error.
       \item But going fast excites multiple motional modes (``spectator modes'') which can introduces errors.
-        XXX Figure of multiple motions. XXX
+        %XXX Figure of multiple motions. XXX
         
       \item Mølmer Sørenson (MS) interaction is common two-qubit gate which requires a
       bichromatic field incident on the ions. Using travelling
@@ -112,7 +112,7 @@ Department of Physics, University of Oxford}
       \Large$$ \hat{H}_{MS-TW} = \hbar\Omega \hat{S}_{\phi-\pi/2}\cos{(\delta t)} + \hbar\Omega\eta \hat{S}_\phi\cos{(\delta t)}(\hat{a}e^{-i\omega_zt} + \hat{a}^\dagger e^{i\omega_zt})$$\normalsize
       \vspace{0.4em}
       with the first term being the carrier whilst the second is the desired coupling.\vspace{0.8em} 
-        XXX Figure of TW MS . XXX
+        %XXX Figure of TW MS . XXX
 
       \item As these terms do not commute, in the ??interaction picture?? this Hamiltonian
             may be expressed as [Xref Canzz?X]:
@@ -144,46 +144,36 @@ Department of Physics, University of Oxford}
 
 %Lattice {{{
     \heading{Standing Wave Single and MS Gates}
-      Bichromatic standing wave Hamiltonian where ions are seperated by $n\lambda/2$:
-      \large$$ \hat{H}_{MS-SW} = \hbar 2\Omega \hat{S}_{\phi}\cos{(\delta t)}\sin{(\Delta\phi/2)} + \hbar 2\Omega\eta \hat{S}_\phi\cos{(\delta t)}(\hat{a}e^{-i\omega_zt} + \hat{a}^\dagger e^{i\omega_zt})\cos{(\Delta\phi/2)}$$\normalsize
-        XXX Figure of SW MS (1b) . XXX
       \begin{itemize}
+      \item Using standing wave gives complete control over phase
+        visible to ions.
+      \item This extra freedom allows fast gates by preventing the
+        saturation effect seen in the travelling MS.
+      \item Bichromatic standing wave Hamiltonian where ions are
+        seperated by $n\lambda/2$:
+      \large$$ \hat{H}_{MS-SW} = \hbar 2\Omega \hat{S}_{\phi}\cos{(\delta t)}\sin{(\Delta\phi/2)} + \hbar 2\Omega\eta \hat{S}_\phi\cos{(\delta t)}(\hat{a}e^{-i\omega_zt} + \hat{a}^\dagger e^{i\omega_zt})\cos{(\Delta\phi/2)}$$\normalsize
+        %XXX Figure of SW MS (1b) . XXX
       \item Setting $\Delta\phi = 0$ (ions sitting at antinodes) we
         suppress the carrier term and maximise sideband
-        coupling.\\
-      \item Enables fast gates by preventing the saturation effect seen in the travelling MS.\\
-      \item Using optical lattice gives complete control over phase visible to ions. \\
+        coupling.
+      \item However standing waves require phase stabilisation to perform
+            coherent interactions.
       \end{itemize}
-
-      \begin{figure}
-        \includegraphics[width=0.48\textwidth]{./figs/Figure_2_v2.pdf}
-        \includegraphics[width=0.48\textwidth]{./figs/two_qubit_gate_figure.pdf}
-      \end{figure}
-
-      Results from Cnulling:
-
     \end{alertblock}
 %}}}
 
-  \end{column}
-  \begin{column}{0.49\textwidth}
-
-%Experimental {{{
-
+%Phase stabilization {{{
     \begin{alertblock}{Phase Stabilization}
-
       \begin{figure}
         \includegraphics[width=0.5\textwidth]{./figs/setup+beams_horizontal.pdf}
       \end{figure}
 
       \begin{itemize}
-      \item Optical lattice requires phase stabilisation to perform
-            coherent interactions.\\
-      \item Phase stabilised passively using enclosure and actively by two-step process:\\
+      \item Passively using enclosure and actively by feedback process to AOM.\\
       \SubItem 1) Fast drifts removed utilising interference of light
             from the two branches on a photodiode (PD).\\
 
-      \SubItem 2) As PD lockpoint is ~30 cm away
+      \SubItem XXX diagram rather than words. 2) As PD lockpoint is ~30 cm away
             from ions, a second feedback loop using the ion as a
             sensor is required. We do this by performing a $\pi/2$-pulse
             using arm 1 ($\pi/2$, b1) followed immediately by a $\pi/2$-pulse
@@ -197,6 +187,18 @@ Department of Physics, University of Oxford}
             gate to be $\epsilon = 0.173(3)\%$ for a travelling wave and
             $\epsilon = 0.144(3)\%$ for the standing wave.\\
       \end{itemize}
+    \end{alertblock}
+%}}}
+
+%Experimental {{{
+  \end{column}
+  \begin{column}{0.49\textwidth}
+    \begin{alertblock}{Experimental Results}
+      Results from Cnulling:
+      \begin{figure}
+        \includegraphics[width=0.48\textwidth]{./figs/Figure_2_v2.pdf}
+        \includegraphics[width=0.48\textwidth]{./figs/two_qubit_gate_figure.pdf}
+      \end{figure}
     \end{alertblock}
 
 
