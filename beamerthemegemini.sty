@@ -115,6 +115,9 @@
 \setbeamertemplate{headline}
 {
   \begin{beamercolorbox}{headline}
+    \vskip2ex
+    \raggedleft{\usebeamerfont{headline author}\usebeamercolor[fg]{headline author}\insertauthor\\[1ex]}
+    \vspace{-5em}
     \begin{columns}
       \begin{column}{\maxlogowidth}
         \vskip5ex
@@ -131,10 +134,10 @@
         \vskip3ex
         \centering
         \ifx \inserttitle \empty \else
-        {\usebeamerfont{headline title}\usebeamercolor[fg]{headline title}\inserttitle\\[0.5ex]}
+        {\usebeamerfont{headline title}\usebeamercolor[fg]{headline title}\inserttitle\\[1ex]}
         \fi
         \ifx \beamer@shortauthor \empty \else
-        {\usebeamerfont{headline author}\usebeamercolor[fg]{headline author}\insertauthor\\[1ex]}
+        %% {\usebeamerfont{headline author}\usebeamercolor[fg]{headline author}\insertauthor\\[1ex]}
         \fi
         \ifx \insertinstitute \empty \else
         {\usebeamerfont{headline institute}\usebeamercolor[fg]{headline institute}\insertinstitute\\[1ex]}

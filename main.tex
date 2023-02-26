@@ -38,11 +38,14 @@
 \end{minipage}
 \begin{minipage}{0.31\linewidth}
   \centering
-SAMOP 2023,
+  \href{mailto:donovan.webb@physics.ox.ac.uk}{donovan.webb@physics.ox.ac.uk}\\
+SAMOP 2023
 \end{minipage}
 \begin{minipage}{0.33\linewidth}
   \hfill
-  \href{mailto:donovan.webb@physics.ox.ac.uk}{donovan.webb@physics.ox.ac.uk}
+  \colorbox{white}{\includegraphics[height=3.5cm]{figs/NPL-logo.png}}~~~
+  \includegraphics[height=3.5cm]{figs/ARO-logo.png}~~~
+  \colorbox{white}{\includegraphics[height=3.5cm]{figs/QCS-logo.pdf}}
 \end{minipage}
 }
 
@@ -53,7 +56,7 @@ SAMOP 2023,
 % use this to include logos on the left and/or right side of the header:
 % \logoright{\includegraphics[height=7cm]{logo1.pdf}}
 \logoleft{\fbox{
-    \includegraphics[height=7cm]{figs/oxlogo.pdf}}
+    \includegraphics[height=9cm]{figs/oxlogo.pdf}}
 }
 
 \newcommand{\SubItem}[1]{
@@ -65,7 +68,7 @@ SAMOP 2023,
 %title {{{
 
 \title[FastGates]{\Huge Next generation platform for implementing fast gates in ion trap quantum computation}
-\author{\textbf{D. Webb \and S. Saner \and O. Bazavan \and M. Minder \and C.J. Ballance}}
+\author{D. Webb \and S. Saner \and O. Bazavan \and M. Minder \and C.J. Ballance\phantom{**}}
 \institute[]{
 Ion Trap Quantum Computing Group,
 Department of Physics, University of Oxford}
@@ -216,12 +219,18 @@ Department of Physics, University of Oxford}
           travelling wave, $\epsilon = 0.144(3)\%$ for standing
           wave.
         \item Universal gate set with phase stabilised standing-waves.
-        \item Standing wave MS maintains $>95\%$ fidelity at short gate durations in contrast to travelling wave MS sharp drop off at $\sim 25\mu s$.
+        \item Standing wave MS maintains $>95\%$ fidelity at short gate durations in contrast to travelling wave MS sharp drop off at $\sim 25\mu s$.\\
+      \begin{figure}
+        \includegraphics[width=0.7\textwidth]{./figs/temp_gate_profile.png}
+      \end{figure}
       \end{itemize}
       \end{minipage}
+      ~~~~
       \begin{minipage}{0.34\linewidth}
       \begin{figure}
+        \fbox{
         \includegraphics[width=\textwidth]{./figs/Figure_2_v2.pdf}
+        }
       \end{figure}
       \end{minipage}
       \begin{figure}
@@ -233,7 +242,7 @@ Department of Physics, University of Oxford}
     \begin{alertblock}{New Platform}
       \begin{minipage}{0.58\textwidth}
       \begin{itemize}
-      \item New ion trap experiment in development for exploring fast
+      \item New \textsuperscript{40}Ca\textsuperscript{+} ion trap experiment in development for exploring fast
         gate regime.
       \item Two high NA lenses create an array of singly
         addressing standing waves.
