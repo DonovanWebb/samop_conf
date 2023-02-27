@@ -102,7 +102,7 @@ Department of Physics, University of Oxford}
     %% of optical lattices which each address a single ion. The lattice array
     %% is created by a set of counter-propagating beams which are tightly
     %% focused by a symmetric setup of high-NA lenses. Control of the optical
-    %% phase at the ion site will be achieved by actively stabilising the
+    %% phase at the ion site will be achieved by actively stabilizing the
     %% counter-propagating beam interferometer and feedbacking on the ion
     %% signal.
     \end{block}
@@ -116,11 +116,10 @@ Department of Physics, University of Oxford}
       \begin{minipage}{0.83\linewidth}
       \begin{itemize}
       \item Two qubit gates are implemented by coupling spin with shared motion of the ions.
-      \item Fast entangling gates enable deeper quantum computational circuit depths for given level of incoherent error.
-      \item But going fast excites multiple motional modes (``spectator modes'') which can introduces errors.
+      \item Fast entangling gates enable deeper quantum computational circuits for a given level of incoherent error.
       \item Mølmer Sørenson (MS) interaction is common two-qubit gate which requires a
-      bichromatic field incident on the ions. Using travelling
-      waves gives the Hamiltonian
+      bichromatic field incident on the ions. Using a quadropole transition, travelling
+      wave to interact with the ions gives the Hamiltonian
       \end{itemize}
       \end{minipage}
       \begin{minipage}{0.14\linewidth}
@@ -141,6 +140,8 @@ Department of Physics, University of Oxford}
       \item \textbf{Carrier term:} causes the spin dependent force
         coupling to be modulated by (J0+J2).
 
+      \item Non-Adiabatic (fast) gates excite multiple motional modes (``spectator modes'') which can introduce errors.
+
       \item \textbf{Spectator excitation:} Amplitude shaped pulses
         [2] effectively remove ``spectator'' error by closing
         phase loops of all excited modes.
@@ -154,7 +155,7 @@ Department of Physics, University of Oxford}
       \end{figure}
       \end{minipage}
       \begin{figure}
-        \includegraphics[width=0.7\textwidth]{./figs/phase_loops_fig.pdf}
+        \includegraphics[width=0.7\textwidth]{./figs/phase_loops_fig_bumpy.pdf}
       \end{figure}
 
 %}}}
@@ -164,8 +165,6 @@ Department of Physics, University of Oxford}
       \begin{itemize}
       \item Using standing wave gives complete control over phase
         visible to ions.
-      \item This extra freedom allows fast gates by preventing the
-        saturation effect seen in the travelling MS.
       \item Bichromatic standing wave Hamiltonian where ions are
         seperated by $n\lambda/2$:
       \large$$ \hat{H}_{MS-SW} = \hbar 2\Omega \hat{S}_{\phi}\cos{(\delta t)}\sin{(\Delta\phi/2)} + \hbar 2\Omega\eta \hat{S}_\phi\cos{(\delta t)}(\hat{a}e^{-i\omega_zt} + \hat{a}^\dagger e^{i\omega_zt})\cos{(\Delta\phi/2)}$$\normalsize
@@ -175,7 +174,9 @@ Department of Physics, University of Oxford}
       \item Setting $\Delta\phi = 0$ (ions sitting at antinodes) we
         suppress the carrier term and maximise sideband
         coupling.
-      \item However standing waves require phase stabilisation to perform
+      \item This extra freedom allows fast gates by preventing the
+        saturation effect seen in the travelling MS.
+      \item However require keeping standing waves phase stable with respect to the ion position to perform
             coherent interactions.
       \end{itemize}
     \end{alertblock}
@@ -196,7 +197,10 @@ Department of Physics, University of Oxford}
             from the two branches on a photodiode (PD).\\
 
       \SubItem 2) Ion used as phase
-            sensor to feedback onto an AOM ($\pi/2$ pulse on b1 and b2). \\
+            sensor to feedback offset between PD and ion site ($\pi/2$ pulse on b1 and b2). \\
+      \item Phase stability of standing wave experimentally
+        demonstrated to $\lambda/50$ with
+        \textsuperscript{88}Sr\textsuperscript{+} and $674$~nm laser.
 
       \begin{figure}
         \includegraphics[width=0.94\textwidth]{./figs/beam_seq.pdf}
@@ -214,13 +218,13 @@ Department of Physics, University of Oxford}
       \begin{minipage}{0.6\linewidth}
       \begin{itemize}
         \item Experimental demonstration with \textsuperscript{88}Sr\textsuperscript{+} and $674$~nm laser.
-        \item Phase stability of standing wave to $\lambda/50$.
         \item Standard Randomized Benchmarking of single qubit
           rotations found gate errors of $\epsilon = 0.173(3)\%$ for
           travelling wave, $\epsilon = 0.144(3)\%$ for standing
           wave.
-        \item Universal gate set with phase stabilised standing-waves.
-        \item Standing wave MS maintains $>95\%$ fidelity at short gate durations in contrast to travelling wave MS sharp drop off at $\sim 25\mu s$.\\
+        \item Universal gate set with phase stabilized standing-waves.
+        \item Carrier suppression by $26$ dB.
+        \item Standing wave MS maintains $\geq 95\%$ fidelity at short gate durations in contrast to travelling wave MS sharp drop off at $\sim 25\mu s$.\\
       \begin{figure}
         \includegraphics[width=0.7\textwidth]{./figs/temp_gate_profile.png}
       \end{figure}
@@ -229,8 +233,12 @@ Department of Physics, University of Oxford}
       ~~~~
       \begin{minipage}{0.34\linewidth}
       \begin{figure}
+        Monochromatic standing wave
         \fbox{
+        \begin{minipage}{\textwidth}
+        \small\center ~~Qubit transition | Carrier Nulled\\
         \includegraphics[width=\textwidth]{./figs/Figure_2_v2.pdf}
+        \end{minipage}
         }
       \end{figure}
       \end{minipage}
@@ -254,14 +262,15 @@ Department of Physics, University of Oxford}
       \end{minipage}
       ~~
       \begin{minipage}{0.35\textwidth}
-      \includegraphics[width=0.94\textwidth]{./figs/ca_struct_tmp.jpeg}
+      \includegraphics[width=0.94\textwidth]{./figs/calcium_struct.pdf}
       \end{minipage}
 
       \begin{figure}
-        \includegraphics[height=0.285\textwidth]{./figs/array_sw.png}
-        \includegraphics[height=0.285\textwidth]{./figs/trap_NA.png}\\
-        \includegraphics[height=0.35\textwidth]{./figs/exp_iso.png}
-        \includegraphics[height=0.35\textwidth]{./figs/mirror_photo.jpg}
+        \includegraphics[height=0.295\textwidth]{./figs/single_address.pdf}~~~
+        \includegraphics[height=0.295\textwidth]{./figs/trap_NA.png}\vspace{1em}
+
+        \includegraphics[height=0.28\textwidth]{./figs/solidworks_overview.png}~~~
+        \includegraphics[height=0.28\textwidth]{./figs/mirror_photo.jpg}
       \end{figure}
 
     \end{alertblock}
