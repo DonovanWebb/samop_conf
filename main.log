@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.10.25)  28 FEB 2023 13:57
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2022.10.25)  28 FEB 2023 17:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1675,31 +1675,31 @@ File: figs/oxlogo.pdf Graphic file (type pdf)
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 79.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 7
-9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 8
+0.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1735,7 +1735,7 @@ LaTeX Font Info:    ... okay on input line 79.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 79.
+Package hyperref Info: Link coloring OFF on input line 80.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1747,9 +1747,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count384
 )
-LaTeX Info: Redefining \ref on input line 79.
-LaTeX Info: Redefining \pageref on input line 79.
-LaTeX Info: Redefining \nameref on input line 79.
+LaTeX Info: Redefining \ref on input line 80.
+LaTeX Info: Redefining \pageref on input line 80.
+LaTeX Info: Redefining \nameref on input line 80.
 
 (./main.out) (./main.out)
 \@outlinefile=\write5
@@ -1784,19 +1784,19 @@ Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.14).
 
 (./main.nav)
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
-9.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
+0.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
-9.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
+0.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-79.
+80.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1807,16 +1807,23 @@ File: figs/ARO-logo.png Graphic file (type bmp)
 <figs/ARO-logo.png>
 File: figs/QCS-logo.pdf Graphic file (type pdf)
 <use figs/QCS-logo.pdf>
+File: figs/qr.pdf Graphic file (type pdf)
+<use figs/qr.pdf>
+
+Overfull \hbox (5.9696pt too wide) in paragraph at lines 80--80
+[] [][][][][][]    []    [][][][][][]    [] 
+ []
+
 File: figs/oxlogo.pdf Graphic file (type pdf)
 <use figs/oxlogo.pdf>
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <6> on input line 79.
+(Font)              <6> on input line 80.
 File: ./figs/level_structure.pdf Graphic file (type pdf)
 <use ./figs/level_structure.pdf>
-LaTeX Font Info:    Calculating math sizes for size <35.83> on input line 315.
+LaTeX Font Info:    Calculating math sizes for size <35.83> on input line 316.
 File: ./figs/J0J2theory.pdf Graphic file (type pdf)
 <use ./figs/J0J2theory.pdf>
-LaTeX Font Info:    Calculating math sizes for size <29.86> on input line 315.
+LaTeX Font Info:    Calculating math sizes for size <29.86> on input line 316.
 File: ./figs/bichro.pdf Graphic file (type pdf)
 <use ./figs/bichro.pdf>
 File: ./figs/phase_loops_fig_bumpy.pdf Graphic file (type pdf)
@@ -1824,12 +1831,12 @@ File: ./figs/phase_loops_fig_bumpy.pdf Graphic file (type pdf)
 File: ./figs/setup+beams_horizontal_poster.pdf Graphic file (type pdf)
 <use ./figs/setup+beams_horizontal_poster.pdf>
 
-Overfull \hbox (26.31892pt too wide) in paragraph at lines 315--315
+Overfull \hbox (26.31892pt too wide) in paragraph at lines 316--316
  [] 
  []
 
 
-Overfull \hbox (4.50328pt too wide) in paragraph at lines 315--315
+Overfull \hbox (4.50328pt too wide) in paragraph at lines 316--316
 []$[]$ $[]$
  []
 
@@ -1842,7 +1849,7 @@ File: ./figs/detuning_scan_100us_gate.pdf Graphic file (type pdf)
 File: ./figs/Figure_2_v2.pdf Graphic file (type pdf)
 <use ./figs/Figure_2_v2.pdf>
 
-Overfull \hbox (20.30984pt too wide) in paragraph at lines 315--315
+Overfull \hbox (20.30984pt too wide) in paragraph at lines 316--316
  [] 
  []
 
@@ -1866,6 +1873,13 @@ File: figs/ARO-logo.png Graphic file (type bmp)
 <figs/ARO-logo.png>
 File: figs/QCS-logo.pdf Graphic file (type pdf)
 <use figs/QCS-logo.pdf>
+File: figs/qr.pdf Graphic file (type pdf)
+<use figs/qr.pdf>
+
+Overfull \hbox (5.9696pt too wide) has occurred while \output is active
+[] [][][][][][]    []    [][][][][][]    [] 
+ []
+
 [1
 
 ]
@@ -1883,10 +1897,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 38760 strings out of 478158
- 954774 string characters out of 5853401
+ 38768 strings out of 478158
+ 954908 string characters out of 5853401
  1471376 words of memory out of 5000000
- 58562 multiletter control sequences out of 15000+600000
+ 58569 multiletter control sequences out of 15000+600000
  523686 words of font info for 138 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  128i,22n,122p,725b,1206s stack positions out of 5000i,500n,10000p,200000b,80000s
