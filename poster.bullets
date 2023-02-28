@@ -1,0 +1,44 @@
+SAMOP Abstract
+
+Next generation platform for implementing fast gates in ion trap quantum computation
+
+Scalable trapped-ion quantum computation relies on the development of
+high-fidelity fast entangling gates in a many ion
+crystal. Conventional geometric phase gates either suffer from
+scattering errors or off-resonant carrier excitations. A potential
+route to achieve fast entanglement is creating a standing wave which
+can suppress the unwanted carrier coupling [Mundt 2003].
+
+We present the roadmap to our next-generation platform tailored for
+fast gates in the ~1us regime where gate speeds become comparable to
+the secular trap frequency. The quadrupole transitions between S1/2
+and D5/2 levels in Calcium 40 will be driven to perform
+Molmer-Sorenson gates with a standing wave rather than a typical
+travelling wave. The off-resonant carrier excitation may be strongly
+suppressed by placing ions at the nodes of the optical lattice. This
+new platform has scope for a multi-ion chain and a corresponding array
+of optical lattices which each address a single ion. The lattice array
+is created by a set of counter-propagating beams which are tightly
+focused by a symmetric setup of high-NA lenses. Control of the optical
+phase at the ion site will be achieved by actively stabilising the
+counter-propagating beam interferometer and feedbacking on the ion
+signal.
+
+
+Outline: 
+
+Why Fast gates?
+  - Origin of a speed limit for (MS) gates
+    - Fig: from carrier nulling paper?
+  - Leaving adiabatic regime, carrier nulling or pulse shaping
+    - Fig: from Vera paper?
+
+How Fast gates?
+  - Standing wave MS
+    - Fig: Experimental set up and how to make phase stable using ion feedback
+    - Data from proof of concept experiment on Blade.
+
+Next generation platform:
+  - Single addressing optical lattice using double high NA lenses
+  - Fig: Ca40 structure. Using high power quadrupole laser.
+  - NPL segmented trap

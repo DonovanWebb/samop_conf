@@ -1,0 +1,53 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+up = np.linspace(0,2*np.pi,1000)-3*np.pi/4
+down = np.linspace(0,2*np.pi,1000)+1*np.pi/4
+up_circ = [np.cos(up)+1/np.sqrt(2),np.sin(up)+1/np.sqrt(2)]
+down_circ = np.array([np.cos(down)-1/np.sqrt(2),np.sin(down)-1/np.sqrt(2)])*0.2
+min_circ = np.array([np.cos(up)+1/np.sqrt(2),np.sin(up)+1/np.sqrt(2)])*0.5
+print(up_circ)
+fig, (ax1, ax2, ax3) = plt.subplots(1,3)
+ax1.plot(up_circ[0], up_circ[1], linewidth=6)
+# ax1.plot(down_circ[0], down_circ[1])
+ax1.set_aspect('equal')
+ax1.axhline(y=0, color='k')
+ax1.axvline(x=0, color='k')
+ax1.set_xticks([])
+ax1.set_yticks([])
+
+# up_pert = [0.1*np.cos(8.4*up),0.1*np.sin(8.4*up)]
+# down_pert = [0.1*np.cos(8.4*down),0.1*np.sin(8.4*down)]
+# ax2.plot(up_circ[0][:-100]+up_pert[0][:-100], up_circ[1][:-100]+up_pert[1][:-100])
+# ax2.plot(down_circ[0][:-100]+down_pert[0][:-100], down_circ[1][:-100]+down_pert[1][:-100])
+ax2.plot(up_circ[0], up_circ[1], linewidth=6)
+ax2.plot(min_circ[0][:-100], min_circ[1][:-100], linewidth=6)
+ax2.plot(down_circ[0][:-300], down_circ[1][:-300], linewidth=6)
+ax2.set_aspect('equal')
+ax2.axhline(y=0, color='k')
+ax2.axvline(x=0, color='k')
+ax2.set_xticks([])
+ax2.set_yticks([])
+
+# up_pert = [0.1*np.cos(9*up),0.1*np.sin(9*up)]
+# down_pert = [0.1*np.cos(9*down),0.1*np.sin(9*down)]
+# ax3.plot(up_circ[0]+up_pert[0], up_circ[1]+up_pert[1])
+# ax3.plot(down_circ[0]+down_pert[0], down_circ[1]+down_pert[1])
+ax3.plot(up_circ[0], up_circ[1], linewidth=6)
+ax3.plot(min_circ[0], min_circ[1], linewidth=6)
+ax3.plot(down_circ[0], down_circ[1], linewidth=6)
+ax3.set_aspect('equal')
+ax3.axhline(y=0, color='k')
+ax3.axvline(x=0, color='k')
+ax3.set_xticks([])
+ax3.set_yticks([])
+
+
+
+# ax4.plot([0,0],[0,1], color='black')
+# ax4.plot([4,4],[0,1], color='black')
+# ax4.plot([5,5],[0,1], color='black')
+# ax4.plot([6,6],[0,1], color='black')
+
+
+plt.show()

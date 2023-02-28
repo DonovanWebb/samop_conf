@@ -1,0 +1,31 @@
+\documentclass[final]{beamer}
+\usetheme{Berlin}
+\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
+
+\title[Fancy Posters]{Making Really Fancy Posters with \LaTeX}
+
+\begin{document}
+
+\begin{frame}{} 
+
+\begin{columns}[T,onlytextwidth]
+  \begin{column}{0.5\textwidth}
+    \begin{block}{block 1}
+      block 1
+    \end{block}
+  \end{column}
+
+
+  \begin{column}{0.5\textwidth}
+    \begin{block}{Phase Stabilization}
+      block 2
+    \end{block}
+    \begin{block}{New Platform}
+      block 1
+    \end{block}
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+\end{document}

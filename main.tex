@@ -70,7 +70,7 @@ SAMOP 2023
 %title {{{
 
 %\title[FastGates]{\Huge Next generation platform for implementing fast gates in ion trap quantum computation}
-\title[FastGates]{\Huge Breaking the ion trap speed limit: fast entangling gates using standing wave optical lattices}
+\title[FastGates]{\Huge Lifting the speed limit: fast entangling gates using phase stable optical lattices in trapped ions}
 \author{D. J. Webb \and S. Saner \and O. Băzăvan \and M. Minder \and D. M. Lucas \and C. J. Ballance\phantom{**}}
 \institute[]{
 Ion Trap Quantum Computing Group,
@@ -84,31 +84,31 @@ Department of Physics, University of Oxford}
 
 %Abstract {{{
 
-    \vspace{-1em}
-    \begin{block}{}
-    \large
-    Scalable trapped-ion quantum computation relies on the development of
-    high-fidelity fast entangling gates in a many ion
-    crystal. Conventional geometric phase gates either suffer from
-    scattering errors or off-resonant carrier excitations. A potential
-    route to achieve fast entanglement is creating a standing wave which
-    can suppress the unwanted carrier coupling. \\
+    %% \vspace{-1em}
+    %% \begin{block}{}
+    %% \large
+    %% Scalable trapped-ion quantum computation relies on the development of
+    %% high-fidelity fast entangling gates in a many ion
+    %% crystal. Conventional geometric phase gates either suffer from
+    %% scattering errors or off-resonant carrier excitations. A potential
+    %% route to achieve fast entanglement is creating a standing wave which
+    %% can suppress the unwanted carrier coupling. \\
 
-    %% We present the roadmap to our next-generation platform tailored for
-    %% fast gates in the ~1us regime where gate speeds become comparable to
-    %% the secular trap frequency. The quadrupole transitions between S1/2
-    %% and D5/2 levels in Calcium 40 will be driven to perform
-    %% Molmer-Sorenson gates with a standing wave rather than a typical
-    %% travelling wave. The off-resonant carrier excitation may be strongly
-    %% suppressed by placing ions at the nodes of the optical lattice. This
-    %% new platform has scope for a multi-ion chain and a corresponding array
-    %% of optical lattices which each address a single ion. The lattice array
-    %% is created by a set of counter-propagating beams which are tightly
-    %% focused by a symmetric setup of high-NA lenses. Control of the optical
-    %% phase at the ion site will be achieved by actively stabilizing the
-    %% counter-propagating beam interferometer and feedbacking on the ion
-    %% signal.
-    \end{block}
+    %% %% We present the roadmap to our next-generation platform tailored for
+    %% %% fast gates in the ~1us regime where gate speeds become comparable to
+    %% %% the secular trap frequency. The quadrupole transitions between S1/2
+    %% %% and D5/2 levels in Calcium 40 will be driven to perform
+    %% %% Molmer-Sorenson gates with a standing wave rather than a typical
+    %% %% travelling wave. The off-resonant carrier excitation may be strongly
+    %% %% suppressed by placing ions at the nodes of the optical lattice. This
+    %% %% new platform has scope for a multi-ion chain and a corresponding array
+    %% %% of optical lattices which each address a single ion. The lattice array
+    %% %% is created by a set of counter-propagating beams which are tightly
+    %% %% focused by a symmetric setup of high-NA lenses. Control of the optical
+    %% %% phase at the ion site will be achieved by actively stabilizing the
+    %% %% counter-propagating beam interferometer and feedbacking on the ion
+    %% %% signal.
+    %% \end{block}
 %}}}
 
 \begin{columns}[t]
@@ -139,11 +139,11 @@ Department of Physics, University of Oxford}
       \Large$$ \hat{H}_{MS-TW} = \hbar\eta\Omega(J_0(2\Omega/\delta) + J_2(2\Omega/\delta))\cdot \cos{(\delta t)}\hat{S}_{\phi}(\hat{a}e^{-i\omega_zt} + \hat{a}^\dagger e^{i\omega_zt})$$\normalsize
       \end{itemize}
       \begin{minipage}{0.58\textwidth}
-      \vspace*{-5em}
+      \vspace*{-3em}
       \begin{itemize}
       \item \textbf{Carrier term:} causes the spin dependent force
-        coupling to be modulated by (J0+J2).
-      \item Imperfectly transferring to the interaction frame leads to drop in fidelities.
+        coupling to be modulated by ($J_0+J_2$).
+      \item Imperfectly transferring to the interaction picture leads to further gate errors.
       \end{itemize}
 
       \end{minipage}
@@ -158,7 +158,7 @@ Department of Physics, University of Oxford}
 %}}}
 
 %Lattice {{{
-     \vspace*{-4.5em}
+     \vspace*{-3.5em}
     \heading{Standing Wave Single and MS Gates}
       \begin{itemize}
       \item Using standing wave gives complete control over phase
@@ -220,6 +220,25 @@ Department of Physics, University of Oxford}
 %Experimental {{{
   \end{column}
   \begin{column}{0.49\textwidth}
+
+    \vspace{-1em}
+    \begin{block}{}
+    \Large \textbf{Abstract:~~}\large Scalable trapped-ion quantum computation relies on the development of
+    high-fidelity fast entangling gates in a many ion
+    crystal. Conventional geometric phase gates either suffer from
+    scattering errors or off-resonant carrier excitations. A potential
+    route to achieve fast entanglement is creating a standing wave which
+    can suppress the unwanted carrier coupling. \\
+    We present an experimental realization of this carrier suppression
+    in the~$674$~nm quadropole transition of
+    \textsuperscript{88}Sr\textsuperscript{+}. We produce a phase
+    stable standing wave with residual fluctuations at the ion
+    position of $\lambda/50$. Carrier suppression of 26 dB is
+    demonstrated leading to two qubit MS gates with improved fidelity at shorter
+    gate durations.\\
+    \end{block}
+    \vspace{1em}
+
     \begin{alertblock}{Optical lattice driven two qubit gates}
       \begin{minipage}{0.60\linewidth}
       \begin{itemize}
