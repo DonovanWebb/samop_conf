@@ -33,8 +33,10 @@
 \footercontent{
 
 \begin{minipage}{0.33\linewidth}
-~[1] O. Băzăvan et al., Phys. Rev. A, vol. 107, no. 2, p. 022617  \\\vspace{0.1em}
-[2] V. M. Schäfer et al., Nature, vol. 555, no. 7694, Art. no. 7694,
+~[1] O. Băzăvan et al., Phys. Rev. A, vol. 107, no. 2, p. 022617, 2023  \\\vspace{0.1em}
+[2] V. M. Schäfer et al., Nature, vol. 555, no. 7694, Art. no. 7694, 2018 \\\vspace{0.1em}
+[3] A. M. Steane et al., New J. Phys., vol. 16, no. 5, p. 053049, 2014 
+
 \end{minipage}
 \begin{minipage}{0.31\linewidth}
   \centering
@@ -67,8 +69,9 @@ SAMOP 2023
 
 %title {{{
 
-\title[FastGates]{\Huge Next generation platform for implementing fast gates in ion trap quantum computation}
-\author{D. Webb \and S. Saner \and O. Bazavan \and M. Minder \and C.J. Ballance\phantom{**}}
+%\title[FastGates]{\Huge Next generation platform for implementing fast gates in ion trap quantum computation}
+\title[FastGates]{\Huge Breaking the ion trap speed limit: fast entangling gates using standing wave optical lattices}
+\author{D. J. Webb \and S. Saner \and O. Băzăvan \and M. Minder \and D. M. Lucas \and C. J. Ballance\phantom{**}}
 \institute[]{
 Ion Trap Quantum Computing Group,
 Department of Physics, University of Oxford}
@@ -124,29 +127,25 @@ Department of Physics, University of Oxford}
       \end{minipage}
       \begin{minipage}{0.14\linewidth}
       \begin{figure}
-        \includegraphics[width=0.7\textwidth]{./figs/level_structure.pdf}
+        \includegraphics[width=0.6\textwidth]{./figs/level_structure.pdf}
       \end{figure}
       \end{minipage}
       \Large$$ \hat{H}_{MS-TW} = \hbar\Omega \hat{S}_{\phi-\pi/2}\cos{(\delta t)} + \hbar\Omega\eta \hat{S}_\phi\cos{(\delta t)}(\hat{a}e^{-i\omega_zt} + \hat{a}^\dagger e^{i\omega_zt})$$\normalsize
-      \vspace{0.4em}
-      with the first term being the carrier whilst the second is the desired coupling.
+      \vspace*{0.8em} with the first term being the carrier whilst the second is the desired coupling.
+      \vspace*{-1.4em}
       \begin{itemize}
       \item As these terms do not commute, in the interaction picture this Hamiltonian
             may be expressed as [1]:
       \Large$$ \hat{H}_{MS-TW} = \hbar\eta\Omega(J_0(2\Omega/\delta) + J_2(2\Omega/\delta))\cdot \cos{(\delta t)}\hat{S}_{\phi}(\hat{a}e^{-i\omega_zt} + \hat{a}^\dagger e^{i\omega_zt})$$\normalsize
       \end{itemize}
       \begin{minipage}{0.58\textwidth}
+      \vspace*{-5em}
       \begin{itemize}
       \item \textbf{Carrier term:} causes the spin dependent force
         coupling to be modulated by (J0+J2).
-
-      \item Non-Adiabatic (fast) gates excite multiple motional modes (``spectator modes'') which can introduce errors.
-
-      \item \textbf{Spectator excitation:} Amplitude shaped pulses
-        [2] effectively remove ``spectator'' error by closing
-        phase loops of all excited modes.
-        
+      \item Imperfectly transferring to the interaction frame leads to drop in fidelities.
       \end{itemize}
+
       \end{minipage}
       \begin{minipage}{0.38\textwidth}
       \begin{figure}
@@ -154,13 +153,12 @@ Department of Physics, University of Oxford}
         %XXX CANZZ aside box
       \end{figure}
       \end{minipage}
-      \begin{figure}
-        \includegraphics[width=0.7\textwidth]{./figs/phase_loops_fig_bumpy.pdf}
-      \end{figure}
+
 
 %}}}
 
 %Lattice {{{
+     \vspace*{-4.5em}
     \heading{Standing Wave Single and MS Gates}
       \begin{itemize}
       \item Using standing wave gives complete control over phase
@@ -176,9 +174,17 @@ Department of Physics, University of Oxford}
         coupling.
       \item This extra freedom allows fast gates by preventing the
         saturation effect seen in the travelling MS.
-      \item However require keeping standing waves phase stable with respect to the ion position to perform
-            coherent interactions.
+      \item Requires standing wave phase stable with respect to the ion position for 
+            coherent interactions.\\
+
+      \item Additional errors as Non-Adiabatic (fast) gates excite multiple motional modes (``spectator modes''). 
+      \item \textbf{Spectator excitation:} Amplitude shaped pulses
+        [2, 3] effectively remove ``spectator'' error by closing
+        phase loops of all excited modes.
       \end{itemize}
+      \begin{figure}
+        \includegraphics[width=0.7\textwidth]{./figs/phase_loops_fig_bumpy.pdf}
+      \end{figure}
     \end{alertblock}
 %}}}
 
@@ -201,39 +207,46 @@ Department of Physics, University of Oxford}
       \item Phase stability of standing wave experimentally
         demonstrated to $\lambda/50$ with
         \textsuperscript{88}Sr\textsuperscript{+} and $674$~nm laser.
-
-      \begin{figure}
-        \includegraphics[width=0.94\textwidth]{./figs/beam_seq.pdf}
-      \end{figure}
-
       \end{itemize}
       \end{minipage}
+      \vspace*{-1em}
+      \begin{figure}
+        \includegraphics[width=0.84\textwidth]{./figs/beam_seq.pdf}
+      \end{figure}
+
     \end{alertblock}
 %}}}
 
 %Experimental {{{
   \end{column}
   \begin{column}{0.49\textwidth}
-    \begin{alertblock}{Carrier Nulling Results}
-      \begin{minipage}{0.6\linewidth}
+    \begin{alertblock}{Optical lattice driven two qubit gates}
+      \begin{minipage}{0.60\linewidth}
       \begin{itemize}
-        \item Experimental demonstration with \textsuperscript{88}Sr\textsuperscript{+} and $674$~nm laser.
+        \item Experimental demonstration of gates at carrier null
+          point with \textsuperscript{88}Sr\textsuperscript{+} and
+          $674$~nm laser.
         \item Standard Randomized Benchmarking of single qubit
           rotations found gate errors of $\epsilon = 0.173(3)\%$ for
           travelling wave, $\epsilon = 0.144(3)\%$ for standing
           wave.
         \item Universal gate set with phase stabilized standing-waves.
         \item Carrier suppression by $26$ dB.
-        \item Standing wave MS maintains $\geq 95\%$ fidelity at short gate durations in contrast to travelling wave MS sharp drop off at $\sim 25\mu s$.\\
+        \item Standing wave MS maintains $\geq 95\%$ fidelity at short gate durations in contrast to travelling wave MS sharp drop off at $\sim 25~\mu$s.\\
       \begin{figure}
-        \includegraphics[width=0.7\textwidth]{./figs/temp_gate_profile.png}
+        %\includegraphics[width=0.7\textwidth]{./figs/temp_gate_profile.png}
+        \center
+        \textbf{\large Two Qubit MS gates\normalsize} \\
+        \hspace*{-2.5em}Motional Sideband Nulled~~~~|~~\quad\quad\quad Carrier Nulled~~~~~~ \\
+        \hspace*{-1.3em}\includegraphics[width=0.52\textwidth]{./figs/detuning_scan_100us_carrier_coupling.pdf}
+        \hspace*{-1em}\includegraphics[width=0.52\textwidth]{./figs/detuning_scan_100us_gate.pdf}
       \end{figure}
       \end{itemize}
       \end{minipage}
-      ~~~~
-      \begin{minipage}{0.34\linewidth}
+      ~
+      \begin{minipage}{0.37\linewidth}
       \begin{figure}
-        Monochromatic standing wave
+        \textbf{\large Single Qubit monochromatic\\ standing wave\normalsize}
         \fbox{
         \begin{minipage}{\textwidth}
         \small\center ~~Qubit transition | Carrier Nulled\\
@@ -243,7 +256,7 @@ Department of Physics, University of Oxford}
       \end{figure}
       \end{minipage}
       \begin{figure}
-        \includegraphics[width=0.8\textwidth]{./figs/two_qubit_gate_figure_h.pdf}
+        \includegraphics[width=0.95\textwidth]{./figs/two_qubit_gate_figure_h.pdf}
       \end{figure}
     \end{alertblock}
 
@@ -266,11 +279,11 @@ Department of Physics, University of Oxford}
       \end{minipage}
 
       \begin{figure}
-        \includegraphics[height=0.295\textwidth]{./figs/single_address.pdf}~~~
-        \includegraphics[height=0.295\textwidth]{./figs/trap_NA.png}\vspace{1em}
+        \includegraphics[height=0.354\textwidth]{./figs/single_address.pdf}~~~
+        \includegraphics[height=0.354\textwidth]{./figs/trap_NA.png}\vspace{1em}
 
-        \includegraphics[height=0.28\textwidth]{./figs/solidworks_overview.png}~~~
-        \includegraphics[height=0.28\textwidth]{./figs/mirror_photo.jpg}
+        \includegraphics[height=0.336\textwidth]{./figs/solidworks_overview.png}~~~
+        \includegraphics[height=0.336\textwidth]{./figs/mirror_photo.jpg}
       \end{figure}
 
     \end{alertblock}
